@@ -3,18 +3,50 @@ body {
     background-color: #D5CABD;
 }
 
-nav {
-    display: flex;
-    padding-right: 100px;
-    padding-left: 30px
-}
+
 
 .navDesign {
     display: flex;
+    flex: auto;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding-left: 130px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 130px;
+}
+
+nav {
+    display: inline;
+    /* flex-direction: row; */
+    /* padding-right: 100px;
+    padding-left: 30px */
+}
+
+li {
+    display: inline;
+    padding: 20px;
+    font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navButton {
+    background-color: transparent;
+    border: 1px;
+}
+
+.navButton:hover {
+    text-decoration: underline;
+}
+
+.accountButton {
+    /* border: 2px;
+    border-radius: 5px; */
+    border: 1px;
+    background-color: transparent;
+}
+
+.accountButton:hover {
+    background-color: gray;
 }
 
 h3 {
@@ -28,11 +60,22 @@ p {
     font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.main {
+main {
     display: flex;
     margin: 100px;
     border: solid;
+    border-width: 1px;
+    border-radius: 40px;
+    padding: 20px;
 
+}
+
+.ipod {
+    flex: auto;
+}
+
+.search {
+    flex: auto;
 }
 
 #ipod {
@@ -44,13 +87,20 @@ p {
 
 .searchAddList {
     padding: 10px;
-    border: solid;
 }
 
 .searchFunction {
     padding: 10px;
+    border-radius: 20px;
+}
+
+.input {
+    border-radius: 50px;
 }
 
 .addList {
     padding: 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color: #aaaba4;
 }

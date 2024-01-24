@@ -9,13 +9,20 @@
 </head>
 
 <body>
-    <nav>
+    <header>
         <div class="navDesign">
-            <!-- <a href="">ADD SONG</a> -->
             <h3>ADD SONG+</h3>
+            <nav>
+                <ul>
+                    <li><button class="navButton">My Playlists</button></li>
+                    <li><button class="navButton">My Artists</button></li>
+                    <li><button class="navButton">My Songs</button></li>
+                </ul>
+            </nav>
+            <button class="accountButton">Create Account</button>
         </div>
-    </nav>
-    <div class="main">
+    </header>
+    <main>
         <div class="ipod">
             <map name=ipod>
                 <area shape="circle" coords="" href="" target="" alt="add song button">
@@ -23,12 +30,14 @@
                 <area shape="circle" coords="" href="" target="" alt="last song button">
                 <area shape="circle" coords="" href="" target="" alt="play/pause song button">
             </map>
-            <!-- <img id="ipod" src="" alt="photo of ipod"> -->
+            <img id="ipod" src="assets/ipodImage.png" alt="photo of ipod">
         </div>
         <div class="search">
             <div class="searchFunction">
                 <p>Who is your favrite artist?</p>
-                <p>Write in who you love listening to? We'll help you findsomeone similar!</p>
+                <input id="inputSeacrh" type="search"
+                    placeholder="Write in who you love listening to? We'll help you findsomeone similar!">
+                <!-- <p>Write in who you love listening to? We'll help you findsomeone similar!</p> -->
 
             </div>
             <div class="addList">
@@ -37,8 +46,7 @@
             </div>
 
         </div>
-
-    </div>
+    </main>
 
 
 
