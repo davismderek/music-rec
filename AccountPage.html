@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="navDesign">
+            <a href="./index.html">
+                <h4>ADD SONG<span class="logoColor">+</span></h4>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="./playlist.html"><button class="navButton">My Playlists</button></a></li>
+                    <li><button class="navButton">My Artists</button></li>
+                    <li><button class="navButton">My Songs</button></li>
+                </ul>
+            </nav>
+            <a href="./index.html"><button class="accountButton"><strong>Return Home</strong></button></a>
+        </div>
+    </header>
+    <main>
+        <div class="mainAccountPage">
+            <h1>Welcome to ADD SONG<span class="logoColor">+</span></h1>
+            <p>Enjoy finding new artisits and songs similar to what you're already enjoying!</p>
+            <p> Sign up for free today.</p>
+
+
+            <form id="accountInfo">
+                <label>
+                    <p>Create A Username</p>
+                    <input type="text" placeholder="Must be 7 characters or more" />
+                </label>
+                <button class="searchButton" type="submit">Submit</button>
+            </form>
+            <form id="passwordInfo">
+                <label>
+                    <p>Create A Password</p>
+                    <input type="text" placeholder="Must be different from username" />
+                </label>
+                <button class="searchButton" type="submit">Submit</button>
+            </form>
+            <form id="emailInfo">
+                <label>
+                    <p>Enter Your Email Address</p>
+                    <input type="text" placeholder="We won't spam you!" />
+                </label>
+                <button class="searchButton" type="submit">Submit</button>
+            </form>
+            <p class="formResponseDesign" id="usernameResponse"></p>
+            <p class="formResponseDesign" id="passwordResponse"></p>
+            <p class="formResponseDesign" id="emailResponse"></p>
+        </div>
+    </main>
+
+    <script>
+        console.log("Page loaded");
+        const userRespParaFiller = "Username: "
+        const usernameForm = document.querySelector("#accountInfo");
+        const usernameResponseParagraph = document.querySelector("#usernameResponse");
+        usernameForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const theForm = event.target;
+            console.log(theForm)
+            const myInput = theForm.querySelector("input");
+            console.log(myInput.value)
+            usernameResponseParagraph.innerHTML = userRespParaFiller + myInput.value
+        })
+        const passRespParaFiller = "Password: "
+        const passwordForm = document.querySelector("#passwordInfo");
+        const passwordResponseParagraph = document.querySelector("#passwordResponse");
+        passwordForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const theForm = event.target;
+            const myInput = theForm.querySelector("input");
+            passwordResponseParagraph.innerHTML = passRespParaFiller + myInput.value
+        })
+        const emailRespParaFiller = "Email: "
+        const emailForm = document.querySelector("#emailInfo");
+        const emailResponseParagraph = document.querySelector("#emailResponse")
+        emailForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const theForm = event.target;
+            const myInput = theForm.querySelector("input");
+            emailResponseParagraph.innerHTML = emailRespParaFiller + myInput.value
+        })
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
