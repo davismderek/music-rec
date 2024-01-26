@@ -5,48 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Music Rep App</title>
+    <title>Add Song+</title>
 </head>
 
 <body>
     <header>
         <div class="navDesign">
-            <h3>ADD SONG+</h3>
+            <a href="./index.html">
+                <h4>ADD SONG<span class="logoColor">+</span></h4>
+            </a>
             <nav>
                 <ul>
-                    <li><button class="navButton">My Playlists</button></li>
+                    <li><a href="./playlist.html"><button class="navButton">My Playlists</button></a></li>
                     <li><button class="navButton">My Artists</button></li>
                     <li><button class="navButton">My Songs</button></li>
                 </ul>
             </nav>
-            <button class="accountButton">Create Account</button>
+            <a href="./AccountPage.html"><button class="accountButton"><strong>Create Account</strong></button></a>
         </div>
     </header>
     <main>
-        <div class="ipod">
-            <map name=ipod>
-                <area shape="circle" coords="" href="" target="" alt="add song button">
-                <area shape="circle" coords="" href="" target="" alt="next song button">
-                <area shape="circle" coords="" href="" target="" alt="last song button">
-                <area shape="circle" coords="" href="" target="" alt="play/pause song button">
-            </map>
-            <img id="ipod" src="assets/ipodImage.png" alt="photo of ipod">
+        <div class="music">
+            <img class="headphones" src="assets/pngegg.png" alt="photo of ipod">
+            <figure>
+                <audio controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
+            </figure>
+            <!-- <iframe src="https://open.spotify.com/embed/track/1kiylxwnw8R8rJoCDtubWM" width="100%" height="380" -->
+            <!-- frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
         </div>
         <div class="search">
             <div class="searchFunction">
-                <p>Who is your favrite artist?</p>
-                <input id="inputSeacrh" type="search"
-                    placeholder="Write in who you love listening to? We'll help you findsomeone similar!">
-                <!-- <p>Write in who you love listening to? We'll help you findsomeone similar!</p> -->
+                <h1>Who is your favorite artist?</h1>
+                <form id="suggestedArtistSearch">
+
+                    <input id="inputSeacrh" type="search" placeholder="We'll help find someone similar!">
+                    <button class="searchButton" type="submit">Search</button>
+                    <!-- <p>Write in who you love listening to? We'll help you findsomeone similar!</p> -->
+                </form>
+                <p class="formResponseDesign" id="userArtistInput"></p>
+            </div>
+            <div class="artistHomeSection">
+                <img class="artistHomeImg" src="assets/BenRector.png" alt="photo of the artist Ben Rector">
+                <img class="artistHomeImg" src="assets/TheLoneBellow.png" alt="photo of band The Lone Bellow">
+                <img class="artistHomeImg" src="assets/Johnnyswim.png" alt="photo of band JohnnySwim">
+
 
             </div>
-            <div class="addList">
-                <p>+ Add these songs to your playlists</p>
-
-            </div>
+            <!-- <div class="addList">
+                <button class="addListButton"><span class="logoColor">+</span> Listen to this later</button><br><br>
+                <button class="addListButton"><span class="logoColor">+</span> Add these songs to your
+                    playlists</button><br><br>
+                <button class="addListButton"><span class="logoColor">+</span> Share with a friend</button>
+            </div> -->
 
         </div>
+        <script>
+            const searchRespParaFiller = "Check out these artists who are similar to "
+            const artistForm = document.querySelector("#suggestedArtistSearch");
+            const searchResponseParagraphFiller = document.querySelector("#userArtistInput");
+            artistForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const theForm = event.target;
+                const myInput = theForm.querySelector("input");
+                searchResponseParagraphFiller.innerHTML = searchRespParaFiller + myInput.value
+            })
+        </script>
     </main>
+    <footer>
+        <ul>
+            <li>Contact</li>
+            <li>|</li>
+            <li>Jobs</li>
+            <li>|</li>
+            <li>About ADD SONG+</li>
+        </ul>
+    </footer>
 
 
 
