@@ -1,9 +1,15 @@
 body {
     margin: 0px;
-    background-color: #D5CABD;
+    background-color: rgb(35, 35, 35);
+    /* display: flex; */
+    min-height: 100vh;
+    position: relative;
 }
 
-
+ul {
+    color: white;
+    font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .navDesign {
     display: flex;
@@ -11,27 +17,46 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navDesign a {
+    text-decoration: none;
+}
+
+.logoColor {
+    color: #e14aac;
+    font-size: rem;
+    /* font-size: 22px; */
 }
 
 nav {
-    display: inline;
-    /* flex-direction: row; */
-    /* padding-right: 100px;
-    padding-left: 30px */
+    /* display: inline; */
+    color: white;
 }
 
-li {
+nav ul {
+    padding-inline-start: 0%;
+}
+
+nav li {
     display: inline;
     padding: 20px;
     font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
+
 .navButton {
     background-color: transparent;
     border: 1px;
+    color: white;
+    font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .navButton:hover {
@@ -39,68 +64,314 @@ li {
 }
 
 .accountButton {
-    /* border: 2px;
-    border-radius: 5px; */
+    border-radius: 5px;
     border: 1px;
-    background-color: transparent;
+    padding: 5px 15px;
+    background-color: #e14aac;
+    color: white;
+    font-weight: bold;
 }
 
 .accountButton:hover {
-    background-color: gray;
+    background-color: rgb(232, 98, 226);
+    color: white
+}
+
+h4 {
+    font-size: 20px;
 }
 
 h3 {
-    color: #2F4858;
+    color: white;
     font-size: 30px;
-    ;
 }
 
+h1,
 h3,
+h4,
 p {
+    color: white;
     font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: ;
 }
 
 main {
     display: flex;
-    margin: 100px;
+    /* margin: 150px; */
+    margin: 100px 150px 100px 150px;
     border: solid;
+    border-color: goldenrod;
     border-width: 1px;
     border-radius: 40px;
     padding: 20px;
+    min-height: calc(100vh - 205px);
 
 }
 
-.ipod {
-    flex: auto;
+.music {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    align-self: center;
 }
+
+figure {
+    margin: 0;
+}
+
 
 .search {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
     flex: auto;
 }
 
-#ipod {
+.searchButton {
+    background-color: transparent;
+    border: 2px solid #e14aac;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #e14aac;
+}
+
+.headphones {
     display: block;
-    margin: 0 auto;
-    width: 260px;
-    height: 232px;
+    margin-top: -20px;
+    width: 350px;
+    height: auto;
+}
+
+form {
+    display: flex;
+    gap: 15px;
 }
 
 .searchAddList {
     padding: 10px;
 }
 
+.addListButton {
+    background-color: transparent;
+    border: 1px;
+    font-size: 16px;
+    color: white;
+    font-family: futura, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.addListButton:hover {
+    font-weight: bold;
+}
+
 .searchFunction {
     padding: 10px;
     border-radius: 20px;
+    /* text-transform: uppercase; */
+    /* font-size: 20px; */
 }
 
-.input {
-    border-radius: 50px;
+input {
+    border-radius: 10px;
+    width: 400px;
+    height: 30px
 }
 
 .addList {
     padding: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(153, 150, 150);
     border-radius: 15px;
-    background-color: #aaaba4;
+    /* background-color: #cdcec6; */
+    background-color: #a7a7a1;
 }
+
+.artistHomeSection {
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.artistHomeImg {
+    border: solid 1px rgb(37, 35, 35);
+    border-radius: 10px;
+}
+
+.playlists {
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.formResponseDesign p {
+    color: white;
+}
+
+.accountWelcome {
+    display: flex;
+
+}
+
+.mainAccountPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: auto;
+}
+
+.mainAccountPage a {
+    /* color: #e14aac; */
+    color: rgb(232, 98, 226)
+}
+
+.mainAccountPage ul {
+    color: white;
+
+}
+
+.songsListDesign {
+    display: none;
+    text-decoration: underline white;
+    font-size: larger;
+}
+
+
+
+#playlistSelect {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    border: 3px solid #e14aac;
+    border-radius: 20px;
+}
+
+form button {
+    height: fit-content;
+    display: flex;
+    align-self: end;
+}
+
+footer {
+    position: absolute;
+    /* position: relative; */
+    /* bottom: 0; */
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .navDesign {
+        padding: 10px;
+        /* max-width: min-content; */
+        justify-content: space-between;
+    }
+
+    nav ul {
+        padding-inline-start: 0px;
+    }
+
+    nav li {
+        display: table-footer-group;
+    }
+
+    main {
+        flex-direction: column;
+        margin: 25px 25px 100px 25px;
+        min-width: fit-content;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .searchButton {
+        width: fit-content;
+    }
+
+    input {
+        width: 300px;
+    }
+
+    .artistHomeSection {
+        flex-direction: column;
+        width: fit-content;
+        align-self: center;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 1300px) {
+    .navDesign {
+        padding: 10px;
+        /* max-width: min-content; */
+        justify-content: space-around;
+    }
+
+    nav ul {
+        padding-inline-start: 0px;
+    }
+
+    main {
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* margin: 25px; */
+        min-width: fit-content;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .searchButton {
+        width: fit-content;
+    }
+
+    input {
+        width: 300px;
+    }
+
+    .artistHomeSection {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .searchFunction form {
+        display: -webkit-inline-box;
+    }
+
+    .searchFunction {
+        align-self: center;
+    }
+
+    /* footer {
+        position: relative;
+        bottom: 0;
+    } */
+}
+
+/* @media (max-width: 1600px) {
+    footer {
+        bottom: 0;
+    }
+} */
