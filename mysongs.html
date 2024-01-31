@@ -33,10 +33,15 @@
             <h1>NeedToBreathe Band Info</h1>
             <p>What information do you want to know about your favorite band, NeedToBreathe?
             </p>
+
+
             <form id="bandAPI">
                 <input type="text" name="inputEntry" />
                 <button type="submit" class="searchButton">Search</button>
             </form>
+
+            <p>Want to see all of NeedToBreathes albums? <button id="artistReleases" class="searchButton"
+                    type="submit">See Albums</button></p>
             <div id="responseText" class="songsListDesign">
 
             </div>
@@ -80,37 +85,56 @@
                         newTextContainer.style.display = 'block';
                         const tryThis = myUserInput.append(" Results")
                         newTextContainer.innerHTML = myUserInput + "<p> Results</p>";
-
                     }
                 });
 
-
-                fetch('https://api.discogs.com/artists/934830', {
-                    method: 'GET',
-                    headers: {
-                        'User-Agent': 'Derek/3.0',
-                    }
-                })
-
-                    .then(function (response) {
-                        console.log(response)
-                        return response.json();
-
+                function get(url) {
+                    return fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'User-Agent': 'Derek/3.0',
+                        }
                     })
-                    .then(function (data) {
-                        showArtist(data);
-                        return data;
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (data) {
+                            return data;
+                        });
+                }
 
-                    });
-
-                function showArtist(data) {
-                    console.log(data);
+                function showArtist(artistName) {
                     const paragraph = document.createElement('p');
-                    paragraph.textContent = data.name;
+                    paragraph.textContent = artistName;
                     bandInfoResults.appendChild(paragraph);
                 }
 
 
+                const albumButton = document.querySelector('#artistReleases')
+
+                function getReleases(url) {
+                    get(url).then(function (data) {
+                        const { releases } = data;
+                        console.log(releases);
+                        releases.map(function (release) {
+                            const { title } = release;
+                            const paragraph = document.createElement('p');
+                            albumButton.addEventListener("click", function () {
+                                paragraph.textContent = title;
+                                bandInfoResults.appendChild(paragraph);
+                            })
+                        })
+                    })
+                }
+
+                (function () {
+                    console.log("IIFE");
+                    get('https://api.discogs.com/artists/934830?token=oGvvoBpcYVfzcTUSrzDcubjqvYRtOaTfnQWVaTUO').then(function (data) {
+                        const { name, releases_url } = data;
+                        showArtist(name);
+                        getReleases(releases_url);
+                    });
+                })();
 
                 // function generateList(userInput) {
                 //     const ulList = document.querySelector('#ulList');
