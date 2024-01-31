@@ -226,10 +226,37 @@ input {
     flex: auto;
 }
 
+.addPlaylistItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 150px 100px 150px;
+    border: solid;
+    border-color: goldenrod;
+    border-width: 1px;
+    border-radius: 40px;
+    padding: 20px;
+    /* min-height: calc(100vh - 205px); */
+}
+
 .mainAccountPage a {
     /* color: #e14aac; */
     color: rgb(232, 98, 226)
 }
+
+.mainSongs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: auto;
+    margin: 100px 150px 100px 150px;
+    border: solid;
+    border-color: goldenrod;
+    border-width: 1px;
+    border-radius: 40px;
+    padding: 20px;
+}
+
 
 .mainAccountPage ul {
     color: white;

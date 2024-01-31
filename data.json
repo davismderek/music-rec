@@ -1,0 +1,113 @@
+{
+    "name": "Needtobreathe",
+    "id": 934830,
+    "resource_url": "https://api.discogs.com/artists/934830",
+    "uri": "https://www.discogs.com/artist/934830-Needtobreathe",
+    "releases_url": "https://api.discogs.com/artists/934830/releases",
+    "images": [
+        {
+            "type": "primary",
+            "uri": "",
+            "resource_url": "",
+            "uri150": "",
+            "width": 600,
+            "height": 400
+        },
+        {
+            "type": "secondary",
+            "uri": "",
+            "resource_url": "",
+            "uri150": "",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "type": "secondary",
+            "uri": "",
+            "resource_url": "",
+            "uri150": "",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "type": "secondary",
+            "uri": "",
+            "resource_url": "",
+            "uri150": "",
+            "width": 600,
+            "height": 424
+        },
+        {
+            "type": "secondary",
+            "uri": "",
+            "resource_url": "",
+            "uri150": "",
+            "width": 600,
+            "height": 400
+        }
+    ],
+    "profile": "NEEDTOBREATHE is a rock band from Seneca, South Carolina (US).",
+    "urls": [
+        "http://www.needtobreathe.net/",
+        "http://twitter.com/NEEDTOBREATHE",
+        "http://www.facebook.com/NEEDTOBREATHE",
+        "http://www.youtube.com/user/NEEDTOBREATHELive",
+        "http://soundcloud.com/needtobreathe"
+    ],
+    "namevariations": [
+        "NEEDTOBREATHE",
+        "Need To Breathe",
+        "NeedToBreathe"
+    ],
+    "members": [
+        {
+            "id": 567028,
+            "name": "Tyler Burkum",
+            "resource_url": "https://api.discogs.com/artists/567028",
+            "active": true
+        },
+        {
+            "id": 1576330,
+            "name": "Ethan Luck",
+            "resource_url": "https://api.discogs.com/artists/1576330",
+            "active": false
+        },
+        {
+            "id": 2887740,
+            "name": "Bo Rinehart",
+            "resource_url": "https://api.discogs.com/artists/2887740",
+            "active": false
+        },
+        {
+            "id": 2887742,
+            "name": "Joe Stillwell",
+            "resource_url": "https://api.discogs.com/artists/2887742",
+            "active": false
+        },
+        {
+            "id": 2887746,
+            "name": "Seth Bolt",
+            "resource_url": "https://api.discogs.com/artists/2887746",
+            "active": true
+        },
+        {
+            "id": 2887747,
+            "name": "Bear Rinehart",
+            "resource_url": "https://api.discogs.com/artists/2887747",
+            "active": true
+        },
+        {
+            "id": 3786608,
+            "name": "Josh Lovelace",
+            "resource_url": "https://api.discogs.com/artists/3786608",
+            "active": true
+        },
+        {
+            "id": 3786609,
+            "name": "Randall Harris",
+            "resource_url": "https://api.discogs.com/artists/3786609",
+            "active": true
+        }
+    ],
+    "data_quality": "Correct"
+}
