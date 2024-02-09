@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Songs on ADD SONG+</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+
+</head>
+
+<body>
+    <body>
+        <header>
+            <div class="navDesign">
+                <a href="../../index.html">
+                    <h4>ADD SONG<span class="logoColor">+</span></h4>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="../../playlist.html"><button class="navButton">My Playlists</button></a></li>
+                        <li><a href="../../lyrics.html"><button class="navButton">Search Lyrics</button></a></li>
+                        <li><a href="./mysongs.html"><button class="navButton">My Songs</button></a></li>
+                    </ul>
+                </nav>
+                <a href="../../AccountPage.html"><button class="accountButton" id="accountButton"><strong>Create
+                            Account</strong></button></a>
+            </div>
+        </header>
+        <div class="mainSongs">
+            <h1>NeedToBreathe Band Info</h1>
+            <p>What information do you want to know about your favorite band, NeedToBreathe?
+            </p>
+            <form id="bandAPI">
+                <input type="text" name="inputEntry" />
+                <button type="submit" class="searchButton">Search</button>
+            </form>
+            <p>Want to see all of NeedToBreathes albums? <button id="artistReleases" class="searchButton"
+                    type="submit">See Albums</button></p>
+            <div id="responseContainer" class="songsListDesign">
+
+            </div>
+            <div id="bandInfoResults">
+
+            </div>
+            <ul id="ulList"></ul>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><button class="navButton"><a href="../../contact.html">Contact</button></a></li>
+                    <li>|</li>
+                    <li><button class="navButton"><a href="../../jobs.html">Careers</button></a></li>
+                    <li>|</li>
+                    <li><button class="navButton"><a href="../../aboutAddSong.html">About ADD SONG<span
+                                    class="logoColor">+</span></button></a></li>
+                </ul>
+            </nav>
+        </footer>
+        <!-- <script src="./js/main.js"></script> -->
+
+        <script src="./mysongs.js">
+
+        </script>
+    </body>
+
+</html>
