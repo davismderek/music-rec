@@ -18,8 +18,8 @@
             <nav>
                 <ul>
                     <li><a href="./playlist.html"><button class="navButton">My Playlists</button></a></li>
-                    <li><button class="navButton">My Artists</button></li>
-                    <li><a href="./mysongs.html"><button class="navButton">My Songs</button></a></li>
+                    <li><a href="./lyrics.html"><button class="navButton">Search Lyrics</button></a></li>
+                    <li><a href="./pages/mysongs/mysongs.html"><button class="navButton">My Songs</button></a></li>
                 </ul>
             </nav>
             <a href="./AccountPage.html"><button class="accountButton"><strong>Create Account</strong></button></a>
@@ -73,6 +73,11 @@
     </main>
     <container class="addPlaylistItems">
         <div>
+            <h3>Add Playlist Title</h3>
+            <form id="playlistTitle">
+                <input type="text" name="playlistTitleEntry" />
+                <button type="submit" class="searchButton">Create Title</button>
+            </form>
             <h3>Add Songs to Playlist</h3>
             <form id="songs">
                 <input type="text" name="songEntry" />
@@ -94,7 +99,7 @@
             </ul>
         </nav>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="./js/playlist.js"></script>
 </body>
 
 </html>
